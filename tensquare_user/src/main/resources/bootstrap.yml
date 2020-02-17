@@ -1,0 +1,21 @@
+spring:
+  cloud:
+    config:
+      name: user
+      profile: dev
+      label: master
+      uri: http://127.0.0.1:12000
+    bus:
+      trace:
+        enabled: true
+  rabbitmq:
+    host: 192.168.1.127
+    port: 5672
+    username: guest
+    password: guest
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"

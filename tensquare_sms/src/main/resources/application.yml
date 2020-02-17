@@ -1,0 +1,21 @@
+server:
+  port: 9009
+spring:
+  application:
+    name: tensquare-sms
+  rabbitmq:
+    host: 192.168.1.127
+    listener:
+      simple:
+        acknowledge-mode: manual
+  mail:
+    username: 1652877739@qq.com
+    password: esningtajcqhejcf
+    host: smtp.qq.com
+    properties.mail.smtp.ssl.enable: true
+
+aliyun:
+  sms:
+    accessKeyId: LTAI4Fedn5X3Z8tuuxYJSkPn
+    accessKeySecret: 50xciMip1SrWYgTDO4abPzBOBPMc14
+

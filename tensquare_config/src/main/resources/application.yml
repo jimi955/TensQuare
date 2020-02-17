@@ -1,0 +1,27 @@
+server:
+  port: 12000
+spring:
+  application:
+    name: tensquare-config
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/jimi955/microservicecloud-config.git
+          # clone-on-start: true
+
+  rabbitmq:
+    host: 192.168.1.127
+    port: 5672
+    username: guest
+    password: guest
+
+management:   # 暴露触发消息总线的地址
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+
+# spring-cloud-bus 消息巴士 将配置改动传达给订阅配置的服务 让其自动加载配置 无需启动
+# curl -X POST http://127.0.0.1:12000/actuator/bus-refresh
+# 学习博客推荐 https://www.cnblogs.com/babycomeon/p/11141160.html

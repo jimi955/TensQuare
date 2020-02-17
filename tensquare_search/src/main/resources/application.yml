@@ -1,0 +1,14 @@
+server:
+  port: 9007
+spring:
+  application:
+    name: tensquare-search
+  data:
+    elasticsearch:
+      cluster-nodes: 192.168.1.127:9300,192.168.1.127:9301,192.168.1.127:9302
+  devtools:
+    # LiveReload server 可以在资源更新的时候由服务端触发浏览器刷新，不过这也需要在浏览器上安装插件。个人感觉没什么用。毕竟自己刷新一下也挺好的
+    # LiveReload的端口35729是spring boot默认的配置
+    # 如果在IDE中启动了多个应用，只有第一个的LiveRload 正常运行
+    livereload:
+      port: 35730
